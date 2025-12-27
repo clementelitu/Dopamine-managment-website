@@ -1,73 +1,80 @@
-<!doctype html>
-<html>
+Ôªø<!doctype html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Install My Chrome Extension</title>
-    <style>
-        body {
-            font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-            max-width: 720px;
-            margin: 40px auto;
-            padding: 0 16px;
-        }
-
-        .card {
-            border: 1px solid #ddd;
-            border-radius: 12px;
-            padding: 16px;
-            margin: 16px 0;
-        }
-
-        a.button {
-            display: inline-block;
-            padding: 10px 14px;
-            border-radius: 10px;
-            border: 1px solid #333;
-            text-decoration: none;
-        }
-
-        code {
-            background: #f5f5f5;
-            padding: 2px 6px;
-            border-radius: 6px;
-        }
-
-        ol li {
-            margin: 8px 0;
-        }
-    </style>
+    <title>Social Media Manager ‚Äî Install</title>
+    <link rel="stylesheet" href="./site.css" />
 </head>
+
 <body>
-    <h1>Install My Chrome Extension</h1>
-    <p>This is a private test build for friends & family.</p>
+    <div class="container">
+        <header class="header">
+            <div>
+                <h1>Social Media Manager (Private Test)</h1>
+                <p class="sub">
+                    Install the Chrome extension manually (friends & family build).
+                </p>
+            </div>
 
-    <div class="card">
-        <h2>1) Download</h2>
-        <p>
-            <a class="button" href="./SocialMediaManager.zip">Download the extension ZIP</a>
-            &nbsp;∑&nbsp;
-            <a href="./SocialMediaManager.zip.sha256.txt">SHA-256 checksum</a>
+            <div class="row">
+                <span class="pill">Manifest V3</span>
+                <span class="pill">Manual install</span>
+            </div>
+        </header>
+
+        <main class="card">
+            <div class="section">
+                <div class="grid two">
+                    <div>
+                        <h2 style="margin:0 0 6px 0; font-size: 15px;">Download</h2>
+                        <p class="small" style="margin:0 0 12px 0;">
+                            Download the ZIP, unzip it, then load it via <code>chrome://extensions</code>.
+                        </p>
+
+                        <div class="row">
+                            <a class="btn btn-primary" href="./SocialMediaManager.zip" download>
+                                ‚¨áÔ∏è Download SocialMediaManager.zip
+                            </a>
+
+                            <!-- Optional: only include if you upload a checksum file -->
+                            <!--
+                            <a class="btn" href="./SocialMediaManager.zip.sha256.txt">
+                              Verify (SHA-256)
+                            </a>
+                            -->
+                        </div>
+
+                        <p class="small" style="margin:12px 0 0 0;">
+                            If the download ever 404s, it usually means the filename/path doesn‚Äôt match exactly (case-sensitive).
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 style="margin:0 0 6px 0; font-size: 15px;">Install steps</h2>
+                        <ol>
+                            <li>Unzip <code>SocialMediaManager.zip</code> to a folder.</li>
+                            <li>Open <code>chrome://extensions</code></li>
+                            <li>Enable <strong>Developer mode</strong> (top-right).</li>
+                            <li>Click <strong>Load unpacked</strong></li>
+                            <li>Select the unzipped folder that contains <code>manifest.json</code>.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hint">
+                <div class="dot"></div>
+                <div>
+                    <strong>Tip:</strong> If Chrome shows an error, make sure you selected the folder
+                    containing <code>manifest.json</code> (not the parent folder).
+                </div>
+            </div>
+        </main>
+
+        <p class="small" style="margin: 14px 0 0 0;">
+            Need to uninstall? Go to <code>chrome://extensions</code> and click <strong>Remove</strong>.
         </p>
-    </div>
-
-    <div class="card">
-        <h2>2) Install (Chrome)</h2>
-        <ol>
-            <li>Unzip the downloaded file.</li>
-            <li>Open <code>chrome://extensions</code></li>
-            <li>Turn on <strong>Developer mode</strong> (top-right).</li>
-            <li>Click <strong>Load unpacked</strong></li>
-            <li>Select the unzipped folder (the one containing <code>manifest.json</code>).</li>
-        </ol>
-    </div>
-
-    <div class="card">
-        <h2>Troubleshooting</h2>
-        <ul>
-            <li>If you donít see ìLoad unpackedî, Developer mode isnít enabled.</li>
-            <li>If it errors, double-check the selected folder contains <code>manifest.json</code>.</li>
-        </ul>
     </div>
 </body>
 </html>
